@@ -12,9 +12,8 @@ const routes: Routes = [
     title: 'home.title',
   },
   {
-    path: '',
-    loadComponent: () => import('./layouts/navbar/navbar.component'),
-    outlet: 'navbar',
+    path: 'tpv',
+    loadChildren: () => import('./tpv/tpv.routes'),
   },
   {
     path: 'admin',
@@ -35,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'tpv',
   },
   ...errorRoute,
 ];

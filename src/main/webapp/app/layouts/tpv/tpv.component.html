@@ -1,0 +1,10 @@
+<p>Restaurante La Herradura</p>
+<p>Fecha: 24/10/2004</p>
+
+<ul class="flex justify-around">
+  @for (tpvRoute of routingTpv; track $index) {
+    <li>{{ tpvRoute.title }}</li>
+  }
+</ul>
+
+<router-outlet></router-outlet>

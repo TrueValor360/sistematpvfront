@@ -47,7 +47,6 @@ export default tseslint.config(
         'error',
         {
           type: 'element',
-          prefix: 'jhi',
           style: 'kebab-case',
         },
       ],

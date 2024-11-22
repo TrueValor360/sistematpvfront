@@ -6,3 +6,4 @@ arrowParens: avoid
 bracketSameLine: false
 plugins:
   - prettier-plugin-packagejson
+endofLine: auto
