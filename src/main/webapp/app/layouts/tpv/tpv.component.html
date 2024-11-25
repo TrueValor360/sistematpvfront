@@ -1,10 +1,21 @@
-<p>Restaurante La Herradura</p>
-<p>Fecha: 24/10/2004</p>
+<div class="flex justify-between w-full">
+  <div class="w-full">
+    <p>Restaurante La Herradura</p>
+    <p>Fecha: 24/10/2004</p>
 
-<ul class="flex justify-around">
-  @for (tpvRoute of routingTpv; track $index) {
-    <li>{{ tpvRoute.title }}</li>
-  }
-</ul>
+    <ul class="flex justify-around text-gray-400 font-bold">
+      @for (tpvRoute of routingTpv; track $index) {
+        <li [routerLink]="tpvRoute.route" routerLinkActive="text-orange-500">{{ tpvRoute.title }}</li>
+      }
+    </ul>
 
-<router-outlet></router-outlet>
+    <button (click)="toggleSidebar()">Click</button>
+
+    <router-outlet></router-outlet>
+  </div>
+
+  <p-sidebar [styleClass]="sidebarstyle" [visible]="sidebarVisible" showCloseIcon="false" [modal]="false" position="right">
+    <h3>Sidebar</h3>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </p-sidebar>
+</div>

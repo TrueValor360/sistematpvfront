@@ -1,28 +1,32 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { RoutingItem } from '../interfaces/RoutingItem.interface';
+import { SidebarModule } from 'primeng/sidebar';
 
 @Component({
   selector: 'tpv-layout',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, SidebarModule],
   templateUrl: './tpv.component.html',
   styleUrl: './tpv.component.scss',
   providers: [],
 })
 export class TpvComponent {
+  sidebarVisible: boolean = false;
+  sidebarstyle: string = '';
+
   routingTpv: RoutingItem[] = [
     {
       title: 'Mesas',
-      route: '/tables',
+      route: '/tpv/tables',
     },
     {
       title: 'Pedidos',
-      route: '/tables',
+      route: '/orders',
     },
     {
       title: 'Autoservicio',
-      route: '/tables',
+      route: '/autoservice',
     },
     {
       title: 'Productos',
@@ -41,4 +45,9 @@ export class TpvComponent {
       route: '/tables',
     },
   ];
+
+  toggleSidebar() {
+    this.sidebarVisible = !this.sidebarVisible;
+    this.sidebarstyle = 'relative w-full';
+  }
 }

@@ -16,6 +16,7 @@ import MainComponent from './layouts/main/main.component';
   template: '<jhi-main></jhi-main>',
   imports: [
     MainComponent,
+
     // jhipster-needle-angular-add-module JHipster will add new module here
   ],
 })

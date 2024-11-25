@@ -6,7 +6,7 @@ const tpvRoutes: Routes = [
   {
     path: '',
     component: TpvComponent,
-    children: [{ path: '', component: TablesComponent }],
+    children: [{ path: 'tables', component: TablesComponent }],
   },
 ];
 
