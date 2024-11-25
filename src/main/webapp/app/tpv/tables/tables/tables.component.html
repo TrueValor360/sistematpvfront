@@ -1,2 +1,42 @@
-nf
-<p>tables works!</p>
+<div class="grid grid-cols-5 content-center gap-4 place-items-center">
+  <tpv-table tableName="T1" />
+  <tpv-table tableName="T2" />
+  <tpv-table tableName="T3" />
+  <tpv-table tableName="T4" />
+  <tpv-table tableName="T5" />
+  <tpv-table tableName="T2" />
+  <tpv-table tableName="T3" />
+  <tpv-table tableName="T4" />
+  <tpv-table tableName="T5" />
+</div>
+
+<div class="w-full flex p-3 mt-6 justify-between items-center">
+  <div class="flex flex-col gap-2">
+    <div class="flex gap-1">
+      <p-button styleClass="bg-green-500 m-0 p-0 text-white" icon="pi pi-plus" />
+      <p>Añadir mesa</p>
+    </div>
+
+    <div class="flex gap-1">
+      <p-button styleClass="bg-red-500 m-0 p-0 text-white" icon="pi pi-minus" />
+      <p>Borrar mesa</p>
+    </div>
+  </div>
+
+  <div class="flex gap-3 font-bold">
+    <div class="flex gap-1">
+      <div class="w-[25px] h-[25px] bg-yellow-300"></div>
+      <p>Reservado</p>
+    </div>
+
+    <div class="flex gap-1">
+      <div class="w-[25px] h-[25px] bg-blue-300"></div>
+      <p>Libre</p>
+    </div>
+
+    <div class="flex gap-1">
+      <div class="w-[25px] h-[25px] bg-purple-500"></div>
+      <p>Ocupado</p>
+    </div>
+  </div>
+</div>

@@ -48,6 +48,6 @@ export class TpvComponent {
 
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
-    this.sidebarstyle = 'relative w-full';
+    this.sidebarstyle = 'relative w-full bg-gray-800 text-white';
   }
 }

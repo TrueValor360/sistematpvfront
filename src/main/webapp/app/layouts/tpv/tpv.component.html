@@ -1,13 +1,16 @@
-<div class="flex justify-between w-full">
+<div class="flex justify-between w-full h-full">
   <div class="w-full">
-    <p>Restaurante La Herradura</p>
-    <p>Fecha: 24/10/2004</p>
-
-    <ul class="flex justify-around text-gray-400 font-bold">
-      @for (tpvRoute of routingTpv; track $index) {
-        <li [routerLink]="tpvRoute.route" routerLinkActive="text-orange-500">{{ tpvRoute.title }}</li>
-      }
-    </ul>
+    <div class="p-5">
+      <div class="text-gray-600 pb-6 font-bold">
+        <p>Restaurante La Herradura</p>
+        <p>Fecha: 24/10/2004</p>
+      </div>
+      <ul class="flex justify-between text-gray-400 font-bold">
+        @for (tpvRoute of routingTpv; track $index) {
+          <li [routerLink]="tpvRoute.route" routerLinkActive="text-orange-500">{{ tpvRoute.title }}</li>
+        }
+      </ul>
+    </div>
 
     <button (click)="toggleSidebar()">Click</button>
 
