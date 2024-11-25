@@ -12,7 +12,9 @@
 
 <div class="grid grid-cols-5 content-center gap-4 place-items-center">
   @for (table of selectedSection.tables; track $index) {
-    <tpv-table [tableName]="table.name" />
+    <div (click)="selectTable($index)">
+      <tpv-table class="cursor-pointer" [tableName]="table.name" />
+    </div>
   }
 </div>
 

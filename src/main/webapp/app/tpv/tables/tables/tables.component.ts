@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { Table } from '../interfaces/table.interface';
 import { TablesService } from '../service/tables.service';
 import { NgClass } from '@angular/common';
+import { SelectedTableService } from '../service/selected-table.service';
 
 @Component({
   selector: 'jhi-tables',
@@ -14,6 +15,7 @@ import { NgClass } from '@angular/common';
 })
 export class TablesComponent {
   tablesService = inject(TablesService);
+  selectedTableService = inject(SelectedTableService);
 
   selectedSection = this.tablesService.sections[0];
 
@@ -30,5 +32,11 @@ export class TablesComponent {
       name: 'T' + this.cont,
       state: 'Libre',
     });
+  }
+
+  selectTable(index: number) {
+    console.log('click');
+
+    this.selectedTableService.selectedTable = this.selectedSection.tables![index];
   }
 }

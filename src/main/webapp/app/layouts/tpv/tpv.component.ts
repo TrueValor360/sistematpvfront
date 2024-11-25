@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { RoutingItem } from '../interfaces/RoutingItem.interface';
-import { SidebarModule } from 'primeng/sidebar';
+import { SideBarComponent } from 'app/tpv/components/side-bar/side-bar.component';
 
 @Component({
   selector: 'tpv-layout',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, SidebarModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, SideBarComponent],
   templateUrl: './tpv.component.html',
   styleUrl: './tpv.component.scss',
   providers: [],
 })
 export class TpvComponent {
-  sidebarVisible: boolean = false;
-  sidebarstyle: string = '';
-
   routingTpv: RoutingItem[] = [
     {
       title: 'Mesas',
@@ -45,9 +42,4 @@ export class TpvComponent {
       route: '/tables',
     },
   ];
-
-  toggleSidebar() {
-    this.sidebarVisible = !this.sidebarVisible;
-    this.sidebarstyle = 'relative w-full bg-gray-800 text-white';
-  }
 }

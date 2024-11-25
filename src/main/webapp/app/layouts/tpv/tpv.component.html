@@ -12,13 +12,8 @@
       </ul>
     </div>
 
-    <button (click)="toggleSidebar()">Click</button>
-
     <router-outlet></router-outlet>
   </div>
 
-  <p-sidebar [styleClass]="sidebarstyle" [visible]="sidebarVisible" showCloseIcon="false" [modal]="false" position="right">
-    <h3>Sidebar</h3>
-    <p>Lorem ipsum dolor sit amet...</p>
-  </p-sidebar>
+  <tpv-side-bar />
 </div>
