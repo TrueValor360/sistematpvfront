@@ -1,3 +1,5 @@
+import { Product } from 'app/tpv/products/interfaces/product.interface';
+
 export interface Table {
   name: string;
   state: string;
@@ -5,6 +7,6 @@ export interface Table {
 }
 
 export interface Order {
-  food: string;
+  food: Product;
   quantity: number;
 }
