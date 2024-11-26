@@ -1,0 +1,9 @@
+<p-card styleClass="p-2 w-[170px] h-fit text-center cursor-pointer">
+  <ng-template pTemplate="header">
+    <img class="h-[100px] w-full" [src]="product.image" alt="product_image" />
+  </ng-template>
+
+  <p class="font-bold">{{ product.name }}</p>
+
+  <p class="pt-2 text-sm">Precio: {{ product.cost }}€</p>
+</p-card>

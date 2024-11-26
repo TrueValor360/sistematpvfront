@@ -7,14 +7,13 @@ import { errorRoute } from './layouts/error/error.route';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadComponent: () => import('./home/home.component'),
     title: 'home.title',
   },
   {
-    path: '',
-    loadComponent: () => import('./layouts/navbar/navbar.component'),
-    outlet: 'navbar',
+    path: 'tpv',
+    loadChildren: () => import('./tpv/tpv.routes'),
   },
   {
     path: 'admin',
@@ -35,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'tpv',
   },
   ...errorRoute,
 ];
