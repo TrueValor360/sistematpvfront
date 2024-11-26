@@ -19,7 +19,7 @@ export class TpvComponent {
     },
     {
       title: 'Pedidos',
-      route: '/orders',
+      route: '/tables',
     },
     {
       title: 'Autoservicio',
@@ -27,7 +27,7 @@ export class TpvComponent {
     },
     {
       title: 'Productos',
-      route: '/tables',
+      route: '/tpv/products',
     },
     {
       title: 'Turnos',

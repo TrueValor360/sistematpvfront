@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { TableComponent } from '../components/table/table.component';
+import { TableComponent } from '../../components/table/table.component';
 import { ButtonModule } from 'primeng/button';
-import { Table } from '../interfaces/table.interface';
-import { TablesService } from '../service/tables.service';
+import { Table } from '../../interfaces/table.interface';
+import { TablesService } from '../../service/tables.service';
 import { NgClass } from '@angular/common';
-import { SelectedTableService } from '../service/selected-table.service';
+import { SelectedTableService } from '../../service/selected-table.service';
 
 @Component({
   selector: 'jhi-tables',
@@ -35,8 +35,6 @@ export class TablesComponent {
   }
 
   selectTable(index: number) {
-    console.log('click');
-
     this.selectedTableService.selectedTable = this.selectedSection.tables![index];
   }
 }

@@ -1,5 +1,5 @@
 <div class="flex justify-between w-full h-full">
-  <div class="w-full">
+  <div class="w-full flex flex-col">
     <div class="p-5">
       <div class="text-gray-600 pb-6 font-bold">
         <p>Restaurante La Herradura</p>
@@ -12,7 +12,9 @@
       </ul>
     </div>
 
-    <router-outlet></router-outlet>
+    <div class="flex-1">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
   <tpv-side-bar />

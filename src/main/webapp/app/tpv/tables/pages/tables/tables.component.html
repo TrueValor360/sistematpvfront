@@ -3,7 +3,7 @@
     <p
       class="cursor-pointer"
       (click)="chancheSection($index)"
-      [ngClass]="{ 'text-purple-500 font-bold': section.name === selectedSection.name }"
+      [ngClass]="{ 'text-purple-500 font-bold underline': section.name === selectedSection.name }"
     >
       {{ section.name }}
     </p>
