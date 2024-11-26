@@ -7,7 +7,14 @@
       </div>
       <ul class="flex justify-between text-gray-400 font-bold">
         @for (tpvRoute of routingTpv; track $index) {
-          <li [routerLink]="tpvRoute.route" routerLinkActive="text-orange-500">{{ tpvRoute.title }}</li>
+          <li
+            class="flex text-sm items-center cursor-pointer"
+            [routerLink]="tpvRoute.route"
+            routerLinkActive="text-orange-500 fill-orange-500"
+          >
+            <ng-container *ngComponentOutlet="tpvRoute.iconComponent!; inputs: iconClass" />
+            {{ tpvRoute.title }}
+          </li>
         }
       </ul>
     </div>
